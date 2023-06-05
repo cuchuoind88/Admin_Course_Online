@@ -1,0 +1,112 @@
+.Wrapper
+{   background: #fafafa;
+    margin-top: 100px;
+    padding: 60px 0 60px;
+    .Wrapper_body
+    {
+        .add-course-header
+        {     
+           display: flex;
+           justify-content: space-between;
+           padding-bottom: 60px;
+            .add-course-btns
+            {   
+                .nav
+                {    display: flex;
+                    flex-wrap: wrap;
+                    padding-left: 0;
+                    align-items: center;
+                    margin-bottom: 0;
+                    list-style: none;
+                        li {
+                            .btn_back
+                             {   display: block;
+                                text-align: center;
+                                text-decoration: none;
+                                font-weight: 600;
+                                font-size: 16px;
+                                padding: 13px 15px;
+                                min-width: 170px;
+                                background: #263238;
+                                border: 1px solid #263238;
+                                color: #fff;
+                                border-radius: 5px;
+                                margin-right: 17px;
+                            }
+                            .btn_save
+                            {
+                                font-weight: 600;
+                                font-size: 16px;
+                                padding: 13px 15px;
+                                min-width: 170px;
+                                background: #159F46;
+                                border: 1px solid #159F46;
+                                color: #fff;
+                                border-radius: 5px;
+                                text-align: center;
+                            }
+                        }
+                }
+            }
+        }
+        .card 
+        {   
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+            margin-bottom: 1.875rem;
+            .widget_set
+            {
+                .widget_setcount
+                {    padding: 30px 30px 30px;
+                    margin-bottom: 30px;
+                    border-bottom: 1px solid rgb(199 199 199 / 25%);
+                    .progress_bar
+                    {  
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        list-style: none;
+                        li 
+                        {   margin-right: 30px;
+                            display: inline-block;
+                            position: relative;
+                            p
+                            {
+                                font-weight: 500;
+                                color: #22100D;
+                                display: inline-flex;
+                                align-items: center;
+                                margin-bottom: 0;
+                                padding-top: 20px;
+                                border-top: 4px solid #C1C9D2;
+                                min-width: 173px;
+                                span {
+                                    width: 15px;
+                                    height: 15px;
+                                    border-radius: 50px;
+                                    margin-right: 6px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border: 1px solid #8792A2;
+                                    background-color: #fff;
+                                   
+                                }
+                            }
+                           
+                        }
+                        .progress_active p {
+                            border-top: 5px solid #159F46 !important;
+                        }
+                        .progress_active span {
+                            color: #159F46 !important;
+                            border-color: #159F46 !important;
+                            position: relative;
+                            border: 5px solid #159f46 !important
+                                 }
+                            }
+                        }
+                }
+            }
+        }
+    }

@@ -1,0 +1,33 @@
+.add_course_info
+{
+    .add_course_header
+    {  padding: 0 30px 30px;
+        h4 {
+            font-weight: 500;
+            font-size: 24px;
+            color: #F66962;
+            margin-bottom: 0;
+        }
+    }
+    .add_course_form
+    {
+        padding: 0 30px 30px;
+        .form_group
+        {
+            margin-bottom: 20px;
+            .add_course_label
+            {
+                font-weight: 500;
+                color: #685F78;
+                margin-bottom: 10px;
+            }
+            .form-control
+            {
+                background: #FFFFFF;
+                border: 1px solid #e9ecef;
+                border-radius: 5px;
+                min-height: 40px;
+            }
+        }
+    }
+}
