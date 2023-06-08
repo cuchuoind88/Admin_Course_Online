@@ -48,7 +48,7 @@ export default function Course() {
           <tbody>
             {courses?.map((course) => {
               return (
-                <tr>
+                <tr key={course._id}>
                   <td>
                     <div className="course_info">
                       <div className="course_img">

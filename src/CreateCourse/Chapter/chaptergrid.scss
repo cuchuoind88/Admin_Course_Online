@@ -1,0 +1,41 @@
+.chapter_grid
+{   padding: 20px 30px 30px;
+    margin-bottom: 30px;
+    background: rgba(227, 227, 227, 0.41);
+    border-radius: 10px;
+
+    .chapter_grid_header
+        {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          p {
+           font-size: 16px;
+            margin-bottom: 0;
+            color: #000000;
+            font-weight: 500;
+          }
+        }
+      .btn_add_lesson
+      {
+        font-weight: 600;
+        font-size: 14px;
+        color: #1D9CFD;
+        background: #FFFFFF;
+        border: 1px solid #1D9CFD;
+        border-radius: 5px;
+        min-width: 105px;
+        text-align: center;
+        padding: 7px 10px;
+      }
+      .btn_add_lesson:hover {
+        color: #FFFFFF;
+        background: #1D9CFD;
+        border: 1px solid #1D9CFD;
+        cursor: pointer;
+      }
+      .chapter_grid_info
+      {  margin-top: 20px;
+       
+      }
+}

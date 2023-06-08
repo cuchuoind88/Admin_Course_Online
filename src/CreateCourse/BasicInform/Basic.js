@@ -2,17 +2,27 @@ import React from "react";
 import "./Basic.scss";
 import { useState, useEffect, useRef } from "react";
 import JoditEditor from "jodit-react";
-export default function Basic() {
+export default function Basic({
+  formValue,
+  setFormValue,
+  editorState,
+  setEditorState,
+}) {
   const config = {
     readonly: false,
   };
-  const [formValue, setFormValue] = useState({
-    title: "",
-    thumbnail: "",
-    price: 0,
-  });
-  const editor = useRef(null);
-  const [editorState, setEditorState] = useState("");
+  const editor = useRef();
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (
+  //     formValue.title &&
+  //     formValue.thumbnail &&
+  //     formValue.price &&
+  //     editorState
+  //   ) {
+  //   }
+  // };
   return (
     <div className="add_course_info">
       <div className="add_course_header">
@@ -26,6 +36,10 @@ export default function Basic() {
               type="text"
               class="form-control"
               placeholder="Course Title"
+              value={formValue.title}
+              onChange={(e) =>
+                setFormValue({ ...formValue, title: e.target.value })
+              }
             />
           </div>
           <div className="form_group">
@@ -34,6 +48,10 @@ export default function Basic() {
               type="text"
               class="form-control"
               placeholder="Course Thumnail"
+              value={formValue.thumbnail}
+              onChange={(e) =>
+                setFormValue({ ...formValue, thumbnail: e.target.value })
+              }
             />
           </div>
           <div className="form_group">
@@ -42,6 +60,10 @@ export default function Basic() {
               type="text"
               class="form-control"
               placeholder="Course Price"
+              value={formValue.price}
+              onChange={(e) =>
+                setFormValue({ ...formValue, price: e.target.value })
+              }
             />
           </div>
           <div className="form_group">
@@ -51,6 +73,7 @@ export default function Basic() {
               value={editorState}
               config={config}
               tabIndex={1}
+              onBlur={(newContent) => setEditorState(newContent)}
             />
           </div>
         </form>

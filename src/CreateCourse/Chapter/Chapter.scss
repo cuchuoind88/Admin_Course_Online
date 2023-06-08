@@ -1,6 +1,6 @@
-.add_course_info
+.add_chapter_info
 {
-    .add_course_header
+    .add_chapter_header
     {  padding: 0 30px 30px;
         h4 {
             font-weight: 500;
@@ -9,13 +9,24 @@
             margin-bottom: 0;
         }
     }
-    .add_course_form
+    .add_chapter_btn
     {
+        margin-left: 30px;
+        padding: 10px;
+        background-color: #F66962;
+        margin-bottom: 15px;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-weight: 500;
+    }
+    .add_chapter_form
+    {  margin-top: 20px;
         padding: 0 30px 30px;
         .form_group
         {
             margin-bottom: 20px;
-            .add_course_label
+            .add_chapter_label
             {
                 font-weight: 500;
                 color: #685F78;
@@ -31,4 +42,5 @@
         }
         
     }
+   
 }
