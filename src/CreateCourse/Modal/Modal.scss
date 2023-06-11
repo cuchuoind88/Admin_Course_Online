@@ -1,0 +1,100 @@
+.Modal_lesson
+        {   align-items: center;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 999;
+            .Modal_body
+             {  
+                background-color: #fff;
+                border-radius: 10px;
+                max-width: 90vw;
+                position: absolute;
+                padding: 30px;
+                width: 600px;
+                z-index: 1;
+                .Modal_header
+                {
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px solid rgba(0,0,0,.1);
+                    padding: 20px 16px 16px;
+                    align-items: center;
+                    h4 {
+                        color: #F66962;
+                    }
+                    button 
+                    {
+                        background-color: #fff;
+                        border: none;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        font-size: 20px;
+                        height: 36px;
+                        line-height: 1px;
+                        outline: none;
+                        width: 36px;
+                        color: #f05123;
+                    }
+                }
+                form 
+                {   margin-top: 15px;
+                    .form_lesson_group
+                    {     display: flex;
+                         flex-direction: column;
+                         margin-bottom: 20px;
+                        .form_lesson_label
+                        {
+                            font-weight: 500;
+                            color: #685F78;
+                            margin-bottom: 10px;
+                        }
+                        .form_lesson_control
+                        {
+                            background: #FFFFFF;
+                            border: 1px solid #e9ecef;
+                            border-radius: 5px;
+                            min-height: 40px;
+                            padding: 6px 15px 6px 15px;
+                            color: #26292c;
+                            font-size: 15px;
+                            outline: none;
+                        }
+                    }
+                }
+                .Save_lesson_btn
+                {
+                 margin-top: 10px;
+                 margin-left: auto;
+                 margin-right: auto;
+                 display: block;
+                 font-weight: 600;
+                 font-size: 14px;
+                 padding: 13px 15px;
+                 min-width: 170px;
+                 background: #159F46;
+                 border: 1px solid #159F46;
+                 color: #fff;
+                 border-radius: 10px;
+               
+                }
+                .Save_lesson_btn:hover {
+                    background: #fff;
+                    border: 1px solid #159F46;
+                    color: #159F46;
+                }
+             }
+             .Modal_overlay
+             {
+                background-color: rgba(0,0,0,0.3);
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+             }
+        }

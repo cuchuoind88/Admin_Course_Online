@@ -1,0 +1,169 @@
+.Course_Detail_Wrapper
+{   background: #fafafa;
+    margin-top: 100px;
+    padding: 60px 0 60px;
+    .Course_Detail_Body
+    {  
+        .edit-course-header
+        {   display: flex;
+            justify-content: space-between;
+            padding-bottom: 60px;
+           
+            .edit-course-btns
+            {
+                .nav
+                {    display: flex;
+                    flex-wrap: wrap;
+                    padding-left: 0;
+                    align-items: center;
+                    margin-bottom: 0;
+                    list-style: none;
+                        li {
+                            .btn_back
+                             {   display: block;
+                                text-align: center;
+                                text-decoration: none;
+                                font-weight: 600;
+                                font-size: 16px;
+                                padding: 13px 15px;
+                                min-width: 170px;
+                                background: #263238;
+                                border: 1px solid #263238;
+                                color: #fff;
+                                border-radius: 5px;
+                                margin-right: 17px;
+                            }
+                        }
+            } }
+        }
+        .card
+        {
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+            margin-bottom: 1.875rem;
+            .card_body
+            {
+                padding: 30px 30px 30px;
+                margin-bottom: 30px;
+                border-bottom: 1px solid rgb(199 199 199 / 25%);
+                .edit_course_info
+                {
+                    .edit_course_header
+                    {  padding: 0 30px 30px;
+                        display: flex;
+                        justify-content: space-between;
+                        .Edit_button
+                        {
+                            min-width: 80px;
+                            border: none;
+                            border-radius: 10px;
+                            padding: 5px;
+                            font-weight: 500;
+                            background-color: #f8a600;
+                            border: 1px solid #f8a600;
+                            color: #fff;
+                        }
+                        .Edit_button:hover
+                        {
+                            background-color: #fff;
+                            color: #f8a600;
+                            border: 1px solid #f8a600;
+                        }
+                        h4 {
+                            font-weight: 500;
+                            font-size: 24px;
+                            color: #f8a600;
+                            margin-bottom: 0;
+                        }
+                    }
+                    .edit_course_form
+                    {
+                        padding: 0 30px 30px;
+                        .form_group
+                        {
+                            margin-bottom: 20px;
+                            .edit_course_label
+                            {
+                                font-weight: 500;
+                                color: #685F78;
+                                margin-bottom: 10px;
+                            }
+                            .form-control
+                            {
+                                background: #FFFFFF;
+                                border: 1px solid #e9ecef;
+                                border-radius: 5px;
+                                min-height: 40px;
+                            }
+                            .disabled-form
+                            {
+                                background-color: #f5f5f5;
+                                color: #a0a0a0;
+                            }
+                        }
+                        .btn_save_course 
+                        {   margin-top: 15px;
+                            background-color: #5db85c;
+                            font-weight: 600;
+                            border-radius: 10px;
+                            font-size: 14px;
+                            padding: 13px 15px;
+                            color: #fff;
+                            border: none;
+                            font-weight: 500;
+                        }
+                        .btn_save_course:hover 
+                        {
+                            background: #fff;
+                            border: 1px solid #159F46;
+                            color: #159F46;
+                        }
+                    }
+                }
+            }
+        }
+        .add_chapter_header
+        {  
+            h4 {
+                font-weight: 500;
+                font-size: 24px;
+                color: #F66962;
+                margin-bottom: 0;
+            }
+        }
+        .add_chapter_btn
+        {
+            margin-top: 20px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #F66962;
+            margin-bottom: 15px;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+        .add_chapter_form
+        {  margin-top: 20px;
+            padding: 0 30px 30px;
+            .form_group
+            {
+                margin-bottom: 20px;
+                .add_chapter_label
+                {
+                    font-weight: 500;
+                    color: #685F78;
+                    margin-bottom: 10px;
+                }
+                .form-control
+                {
+                    background: #FFFFFF;
+                    border: 1px solid #e9ecef;
+                    border-radius: 5px;
+                    min-height: 40px;
+                }
+            }
+            
+        }
+    }
+}

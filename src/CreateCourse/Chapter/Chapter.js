@@ -48,7 +48,6 @@ export default function Chapter({
       <button className="add_chapter_btn" onClick={handleOpen}>
         Add Chapter
       </button>
-
       <div className="add_chapter_form">
         <form>
           <div className="form_group">

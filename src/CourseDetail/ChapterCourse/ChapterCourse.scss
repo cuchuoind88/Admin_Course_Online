@@ -1,0 +1,96 @@
+.chapter_wrapper
+{   padding: 20px 30px 30px;
+    margin-bottom: 30px;
+    background: rgba(227, 227, 227, 0.41);
+    border-radius: 10px;
+    .chapter_header
+        {
+          display: flex;
+          justify-content: space-between;
+          p {
+           font-size: 16px;
+            margin-bottom: 0;
+            color: #000000;
+            font-weight: 500;
+          }
+        }
+        .btn_chapters
+        {  display: flex;
+         .btn_edit_chapter
+         {
+            margin-right: 20px;
+            margin-top: 5px;
+         }
+         .btn_edit_chapter:hover 
+         {
+          cursor: pointer;
+         }
+         .btn_delete_chapter:hover 
+         {
+          cursor: pointer;
+         }
+         .btn_delete_chapter
+         {
+            margin-right: 20px;
+            margin-top: 5px;
+         }
+          .btn_add_lesson
+          {
+            font-weight: 600;
+            font-size: 14px;
+            color: #1D9CFD;
+            background: #FFFFFF;
+            border: 1px solid #1D9CFD;
+            border-radius: 5px;
+            min-width: 105px;
+            text-align: center;
+            padding: 7px 10px;
+          }
+          .btn_add_lesson:hover {
+            color: #FFFFFF;
+            background: #1D9CFD;
+            border: 1px solid #1D9CFD;
+            cursor: pointer;
+          }
+        
+        }
+      .chapter_grid_info
+      {  margin-top: 20px;
+       
+      }
+      form 
+      {
+        .form_group
+        {
+          margin-bottom: 20px;
+          .edit_chapter_label
+          {
+            font-weight: 500;
+            color: #FF875A;
+            margin-bottom: 10px;
+          }
+          .form-control
+          {
+              background: #FFFFFF;
+              border: 1px solid #e9ecef;
+              border-radius: 5px;
+              min-height: 40px;
+          }
+        }
+      }
+      .btn_update_chapter
+      {
+        border: none;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #2ecc71;
+        border: 1px solid #2ecc71;
+        color: #fff;
+        font-weight: 500;
+      }
+      .btn_update_chapter:hover 
+      {
+        background-color: #fff;
+        color: #2ecc71;
+      }
+}

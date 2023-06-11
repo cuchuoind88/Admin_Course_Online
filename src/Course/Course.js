@@ -50,24 +50,26 @@ export default function Course() {
               return (
                 <tr key={course._id}>
                   <td>
-                    <div className="course_info">
-                      <div className="course_img">
-                        <img src={course.thumbnail} />
-                      </div>
-                      <div className="course_detail">
-                        <p>{course.title}</p>
-                        <div className="course_attribute">
-                          <div className="course_price">
-                            <FontAwesomeIcon icon={faTag} />
-                            <p>{course.price} VND</p>
-                          </div>
-                          <div className="course_view">
-                            <FontAwesomeIcon icon={faEye} />
-                            <p>{course.views} Views</p>
+                    <Link to={`/edit-course/${course._id}`}>
+                      <div className="course_info">
+                        <div className="course_img">
+                          <img src={course.thumbnail} />
+                        </div>
+                        <div className="course_detail">
+                          <p>{course.title}</p>
+                          <div className="course_attribute">
+                            <div className="course_price">
+                              <FontAwesomeIcon icon={faTag} />
+                              <p>{course.price} VND</p>
+                            </div>
+                            <div className="course_view">
+                              <FontAwesomeIcon icon={faEye} />
+                              <p>{course.views} Views</p>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </td>
                   <td>
                     <p className="student">{course.enrolledCount}</p>

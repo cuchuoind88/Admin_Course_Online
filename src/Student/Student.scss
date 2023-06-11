@@ -1,0 +1,84 @@
+.settings-widget
+{   border: 1px solid #e9ecef;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    .setting-inner
+    {   background-color: #ffffff;
+        border-radius: 10px;
+        .course-head-student
+        {   padding: 25px;
+            h3 
+            {
+                color: #392C7D;
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+            p 
+            {
+                color: #303030;
+                margin-bottom: 0;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+.student-box
+{   border: 1px solid rgb(199 199 199 / 25%);
+    background: rgb(255 255 255 / 25%);
+    border-radius: 5px;
+    margin-bottom: 30px;
+    .student-box-header
+    {   padding: 20px;
+        .student-img
+        {
+            position: relative;
+            text-align: center;
+            img 
+            {
+                max-width: 100px;
+            }
+        }
+        .student-content
+        {
+            padding: 15px 0px;
+            text-align: center;
+            h5 
+            {
+                color: #000;
+                font-size: 20px;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+.student-enroll
+{
+    ul 
+    {  padding: 0;
+       margin: 0;
+       list-style: none;
+        li 
+        {   list-style: none;
+            padding: 0;
+            border-top: 1px solid rgb(199 199 199 / 25%);
+            list-style: none;
+            display: flex;
+            padding: 15px;
+            font-weight: 500;
+            color: #303030;
+            font-size: 14px;
+            justify-content: space-between;
+        
+            .User_role
+            {
+              color:#808080;
+            }
+            .verifyed_student
+            {
+              color: #00FF00;
+            }
+        }
+    }
+}

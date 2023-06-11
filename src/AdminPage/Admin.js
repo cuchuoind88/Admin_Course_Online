@@ -11,6 +11,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import { Container, Row, Col } from "reactstrap";
 import Course from "../Course/Course";
 import axios from "axios";
+import Student from "../Student/Student";
 export default function Admin() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -34,7 +35,7 @@ export default function Admin() {
   };
   const handleComponent = () => {
     if (LXCstate.active === "myUser") {
-      return <div>USER</div>;
+      return <Student />;
     } else if (LXCstate.active === "myCourse") {
       return <Course />;
     } else {
