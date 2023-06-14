@@ -1,0 +1,228 @@
+.wrapper
+{
+    .student_banner
+    {   margin-top: 90px;
+        padding: 20px 0;
+        text-align: center;
+        background: url(https://dreamslms.dreamguystech.com/html/assets/img/students/student-bg-banner.png) #FFB54A;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .profile_info
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            a {
+                display: block;
+                max-width: 130px;
+                max-height: 100px;
+                border-radius: 10px;
+                border: 5px solid #FFFFFF;
+                margin-bottom: 8px;
+                img {
+                  width: 100%;
+                   
+                }
+            }
+            h4 
+            {
+                display: flex;
+                flex-direction: column;
+               
+                margin-bottom: 0;
+                p { 
+                    font-size: 28px;
+                    font-weight: 600;
+                    color: #fff
+                }
+                span 
+                {
+                    background: #fff;
+                    padding: 2px 10px;
+                    font-size: 14px;
+                    border-radius: 5px;
+                   
+                }
+            }
+        }
+    }
+    .student_body
+    {     margin-top: 80px;
+        .card_education
+        {   
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+            margin-bottom: 1.875rem;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            .card_education_body
+            {       max-height: 1000px;
+                    overflow-y: scroll;
+                    padding: 24px;
+                    padding-bottom: 0;
+                    .sub-title
+                    {
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: #392C7D;
+                        margin-bottom: 20px;
+                    }
+                    .course_box
+                    {
+                        border: 1px solid #e9ecef;
+                        margin-bottom: 25px;
+                        border-radius: 10px;
+                        display: flex;
+                        .product
+                        {
+                            width: 100%;
+                            padding: 12px;
+                            background: #fff;
+                            border-radius: 10px;
+                            min-height: 460px;
+                            .product-img
+                            {
+                                border-radius: 10px 10px 10px 10px;
+                                img 
+                                {
+                                    width: 100%;
+                                }
+                            }
+                            .product-content
+                            {
+                                padding-top: 18px;
+                                display: inline-block;
+                                width: 100%;
+                                .course_detail
+                                {
+                                   max-width: 270px;
+                                   p {
+                                       font-size: 16px;
+                                       color: #000;
+                                       font-weight: 500;
+                                   }
+                                   .course_attribute
+                                   {
+                                       display: flex;
+                                       margin: 7px 0px;
+                                       justify-content: space-between;
+                                    
+                                       .course_price
+                                       {
+                                               display: flex;
+                                               align-items: center;
+                                               svg 
+                                               {
+                                                   color: #f66962;
+                                               }
+                                               p {
+                                                   font-weight: 500;
+                                                   margin-bottom: 0;
+                                                   font-size: 16px;
+                                                   margin-left: 12px;
+                                               }
+                                       }
+                                       .course_view
+                                       {
+                                               display: flex;
+                                               align-items: center;
+                                               p {
+                                                   font-weight: 500;
+                                                   margin-bottom: 0;
+                                                   font-size: 16px;
+                                                   margin-left: 12px;
+                                               }
+                                               svg 
+                                               {
+                                                   color: #f66962;
+                                               }
+                                       }
+                                   }
+                                }
+                            }
+                        }
+                    }
+            }
+        }
+        .card_overview
+        {
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+            margin-bottom: 1.875rem;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            .card_body
+            {
+                padding: 24px;
+                h5 
+                {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #392C7D;
+                    margin-bottom: 20px;
+                }
+                .contact_info
+                {
+                    margin-top: 23px;
+                    .edu-wrap
+                    {
+                        margin-bottom: 23px;
+                        display: flex;
+                        .edu-name
+                        {
+                            margin-right: 15px;
+                            span 
+                            {
+                                width: 40px;
+                                height: 40px;
+                                background: #FF5364;
+                                border-radius: 50%;
+                                color: #FFFFFF;
+                                font-size: 14px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                        .edu-detail
+                        {
+                            h6 
+                            {
+                                font-weight: 700;
+                                color: #000;
+                                margin-bottom: 6px;
+                            }
+                            p 
+                            {
+                                margin-bottom: 0;
+                                font-size: 14px;
+                                a {
+                                    color: #22100D;
+                                    text-decoration: none;
+                                }
+                            }
+                            p:hover 
+                            {
+                            
+                                a {
+                                    color: #FF5364;
+                                }
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

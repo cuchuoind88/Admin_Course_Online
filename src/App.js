@@ -5,6 +5,7 @@ import Admin from "./AdminPage/Admin";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CreateCoure from "./CreateCourse/CreateCoure";
 import CourseDetail from "./CourseDetail/CourseDetail";
+import StudentDetails from "./StudentDetails/StudentDetails";
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +14,7 @@ function App() {
         <Route path="/dashboard" element={<Admin />} />
         <Route path="/create-course" element={<CreateCoure />} />
         <Route path="/edit-course/:courseId" element={<CourseDetail />} />
+        <Route path="/user/:username" element={<StudentDetails />} />
       </Routes>
     </BrowserRouter>
   );

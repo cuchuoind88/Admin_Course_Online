@@ -3,6 +3,7 @@ import "./Student.scss";
 import { Row, Col } from "reactstrap";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 export default function Student() {
   const [users, setUsers] = useState([]);
   useEffect(() => {
@@ -31,29 +32,33 @@ export default function Student() {
       {users?.map((user) => {
         return (
           <Col md="6" lg="4">
-            <div className="student-box">
-              <div className="student-box-header">
-                <div className="student-img">
-                  <img src={user.avatar}></img>
+            <Link to={`/user/${user.username}`}>
+              <div className="student-box">
+                <div className="student-box-header">
+                  <div className="student-img">
+                    <img src={user.avatar}></img>
+                  </div>
+                  <div className="student-content">
+                    <h5>{user.username}</h5>
+                  </div>
                 </div>
-                <div className="student-content">
-                  <h5>{user.username}</h5>
+                <div className="student-enroll">
+                  <ul>
+                    <li>
+                      Role :<span className="User_role">{user.role}</span>
+                    </li>
+                    <li>
+                      Status :
+                      <span
+                        className={user.isVerified ? "verifyed_student" : ""}
+                      >
+                        {user.isVerified ? "Verified" : "None"}
+                      </span>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div className="student-enroll">
-                <ul>
-                  <li>
-                    Role :<span className="User_role">{user.role}</span>
-                  </li>
-                  <li>
-                    Status :
-                    <span className={user.isVerified ? "verifyed_student" : ""}>
-                      {user.isVerified ? "Verified" : "None"}
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            </Link>
           </Col>
         );
       })}

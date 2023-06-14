@@ -23,7 +23,11 @@
         }
     }
 }
+a {
+    text-decoration: none;
+}
 .student-box
+
 {   border: 1px solid rgb(199 199 199 / 25%);
     background: rgb(255 255 255 / 25%);
     border-radius: 5px;
@@ -52,6 +56,10 @@
             }
         }
     }
+}
+.student-box:hover
+{
+    cursor: pointer;
 }
 .student-enroll
 {
