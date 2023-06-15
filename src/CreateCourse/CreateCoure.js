@@ -28,10 +28,10 @@ export default function CreateCoure() {
   const [currentChapter, setCurrentChapter] = useState("");
   const [lesson, setLesson] = useState([]);
   const navigate = useNavigate();
-  const [formLesson, setFormLesson] = useState({
-    title: "",
-    video: "",
-  });
+  // const [formLesson, setFormLesson] = useState({
+  //   title: "",
+  //   video: "",
+  // });
   const config = {
     readonly: false,
   };
@@ -83,29 +83,29 @@ export default function CreateCoure() {
     verifyLogin();
     grabUserDetails();
   }, []);
-  const SaveLesson = async () => {
-    const newLesson = await axios.post(
-      "http://localhost:2002/lesson/create",
-      {
-        video: formLesson.video,
-        title: formLesson.title,
-        content: lessonContent.replace(/<[^>]+>/g, ""),
-        course: courseId,
-        chapter: currentChapter,
-      },
-      {
-        headers: {
-          Authorization: "Bearer " + localStorage.getItem("token"),
-        },
-      }
-    );
-    setOpenModal(false);
-    console.log(newLesson);
-    setLesson((preLesson) => [...preLesson, newLesson.data.lesson]);
-    // console.log(courseId);
-    // console.log(currentChapter);
-    // console.log(lessonContent.replace(/<[^>]+>/g, ""));
-  };
+  // const SaveLesson = async () => {
+  //   const newLesson = await axios.post(
+  //     "http://localhost:2002/lesson/create",
+  //     {
+  //       video: formLesson.video,
+  //       title: formLesson.title,
+  //       content: lessonContent.replace(/<[^>]+>/g, ""),
+  //       course: courseId,
+  //       chapter: currentChapter,
+  //     },
+  //     {
+  //       headers: {
+  //         Authorization: "Bearer " + localStorage.getItem("token"),
+  //       },
+  //     }
+  //   );
+  //   setOpenModal(false);
+  //   console.log(newLesson);
+  //   setLesson((preLesson) => [...preLesson, newLesson.data.lesson]);
+  //   // console.log(courseId);
+  //   // console.log(currentChapter);
+  //   // console.log(lessonContent.replace(/<[^>]+>/g, ""));
+  // };
 
   const handleContinue = async () => {
     try {
@@ -261,8 +261,8 @@ export default function CreateCoure() {
       {openModal && (
         <Modal
           setOpenModal={setOpenModal}
-          formLesson={formLesson}
-          setFormLesson={setFormLesson}
+          // formLesson={formLesson}
+          // setFormLesson={setFormLesson}
           lessonContent={lessonContent}
           setlessonContent={setlessonContent}
           courseId={courseId}

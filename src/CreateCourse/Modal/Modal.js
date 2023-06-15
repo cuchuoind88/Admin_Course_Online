@@ -5,8 +5,6 @@ import axios from "axios";
 import "./Modal.scss";
 export default function Modal({
   setOpenModal,
-  formLesson,
-  setFormLesson,
   lessonContent,
   setlessonContent,
   courseId,
@@ -17,19 +15,31 @@ export default function Modal({
   const config = {
     readonly: false,
   };
+  const [selectedFile, setSelectedFile] = useState({});
+  console.log(selectedFile);
+  const [formTitle, setFormTile] = useState("");
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
   const SaveLesson = async () => {
+    const formData = new FormData();
+    formData.append("video", selectedFile);
+    formData.append("title", formTitle);
+    formData.append("course", courseId);
+    formData.append("chapter", currentChapter);
+    formData.append("content", lessonContent.replace(/<[^>]+>/g, ""));
     const newLesson = await axios.post(
       "http://localhost:2002/lesson/create",
-      {
-        video: formLesson.video,
-        title: formLesson.title,
-        content: lessonContent.replace(/<[^>]+>/g, ""),
-        course: courseId,
-        chapter: currentChapter,
-      },
+      // video: "",
+      // title: formTitle,
+      // content: lessonContent.replace(/<[^>]+>/g, ""),
+      // course: courseId,
+      // chapter: currentChapter,
+      formData,
       {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
+          "Content-Type": "multipart/form-data", // Cấu hình header để Axios hiểu dữ liệu là FormData
         },
       }
     );
@@ -75,24 +85,21 @@ export default function Modal({
               type="text"
               placeholder="Lesson Title"
               className="form_lesson_control"
-              value={formLesson.title}
+              value={formTitle}
               onChange={(e) => {
-                setFormLesson({ ...formLesson, title: e.target.value });
+                setFormTile(e.target.value);
               }}
             />
           </div>
           <div className="form_lesson_group">
             <label className="form_lesson_label">Video Lesson</label>
             <input
-              type="text"
-              placeholder="URL"
-              className="form_lesson_control"
-              value={formLesson.video}
-              onChange={(e) => {
-                setFormLesson({ ...formLesson, video: e.target.value });
-              }}
+              className="form_lesson_control input_file"
+              type="file"
+              onChange={handleFileChange}
             />
           </div>
+
           <div className="form_lesson_group">
             <label className="form_lesson_label">Lesson Content</label>
             <JoditEditor

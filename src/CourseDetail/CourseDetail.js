@@ -25,10 +25,6 @@ export default function CourseDetail() {
   const [currentChapter, setCurrentChapter] = useState("");
   const [lesson, setLesson] = useState([]);
   const [chapter, setChapter] = useState([]);
-  const [formLesson, setFormLesson] = useState({
-    title: "",
-    video: "",
-  });
   const [course, setCourse] = useState({});
   const [isEditing, setEditing] = useState(true);
   const [formValue, setFormValue] = useState({
@@ -330,8 +326,6 @@ export default function CourseDetail() {
                 {openModal && (
                   <Modal
                     setOpenModal={setOpenModal}
-                    formLesson={formLesson}
-                    setFormLesson={setFormLesson}
                     lessonContent={lessonContent}
                     setlessonContent={setlessonContent}
                     courseId={courseId}
