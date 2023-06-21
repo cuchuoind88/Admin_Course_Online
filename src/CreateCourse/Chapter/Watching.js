@@ -39,11 +39,21 @@ export default function Watching({ filter }) {
           <h4 className="Player_content">{filter.content}</h4>
           <div className="Player_wrapper">
             <ReactPlayer
+              id="my_video_1"
               controls
+              preload="auto"
               width="100%"
               height="100%"
               className="React_player"
               url={filter.video}
+              config={{
+                file: {
+                  hlsOptions: {
+                    withCredentials: true,
+                  },
+                },
+              }}
+              plugins={[require("@videojs/http-streaming")]}
             />
           </div>
         </div>
